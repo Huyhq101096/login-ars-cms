@@ -1,32 +1,30 @@
-body, html {
-    height: 100%;
-  }
+body,
+html {
+  height: 100%;
+}
 
-  .left-side {
-    background-image: url('Bidding-Portal-Web 1.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    min-height: 100vh;
-  }
+.left-side {
+  background-image: url("Bidding-Portal-Web 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
 
+.right-side {
+  padding: 2rem;
+  height: 100vh;
+}
 
-  .right-side {
-    /* background-color: #f1f1f1; */
-    padding: 2rem;
-    height: 100vh;
-  }
+.online {
+  font-style: italic;
+}
 
-  .online {
-    font-style: italic;
-  }
+.custom-placeholder {
+  opacity: 0.5;
+}
 
+.btn-login {
+  background-color: #d0d5dd;
+}
 
-  .custom-placeholder {
-    opacity: 0.5;
-  }
-
-  .btn-login {
-    background-color: #D0D5DD;
-  }
-  

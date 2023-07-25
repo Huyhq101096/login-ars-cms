@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="login.css" />
   <title>Login Page</title>
 
@@ -45,10 +46,17 @@
               <label for="username" class="form-label">Tên đăng nhập</label>
               <input type="text" class="form-control form-control-lg custom-placeholder" id="username" placeholder="Vui lòng nhập tên đăng nhập của bạn">
             </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Mật Khẩu</label>
+
+
+            <div class="mb-3 position-relative">
+            <label for="password" class="form-label">Mật Khẩu</label>
+            <div class="input-group">
               <input type="password" class="form-control form-control-lg custom-placeholder" id="password" placeholder="Vui lòng nhập mật khẩu của bạn">
+              <span class="input-group-text p-0" style="border: none; background: transparent;">
+                <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+              </span>
             </div>
+          </div>
 
             <div class="mb-3 d-flex justify-content-between">
               <div class="d-flex align-items-center justify-content-center">
@@ -65,6 +73,7 @@
       </div>
     </div>
   </div>
+  <script src="login.js"></script>
   <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
