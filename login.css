@@ -13,18 +13,48 @@ html {
 
 .right-side {
   padding: 2rem;
-  height: 100vh;
+  height: 90vh;
 }
 
 .online {
   font-style: italic;
 }
 
-.custom-placeholder {
-  opacity: 0.5;
+.btn-login {
+  background-color:  #09BDAB;
+  height: 48px;
+  color: white;
 }
 
-.btn-login {
-  background-color: #d0d5dd;
+.btn-login:hover {
+  background-color:  #10ecd6;
 }
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 20;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.btn-checkbox {
+  accent-color: #09BDAB;
+}
+
+
+
+
+
+
+
+
+
+
 
