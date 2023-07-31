@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="forget_pw.css" />
-  <title>Forget Password</title>
+  <link rel="stylesheet" href="reset_pw.css" />
+  <title>Reset Password</title>
 </head>
 
 <body>
@@ -28,29 +28,47 @@
               <!-- Phần chứa logo -->
               <div>
                 <span class="p-2">
-                  <a href="login.html"><i class="fas fa-arrow-left"></i></a>
+                  <a href="forget_pw.html"><i class="fas fa-arrow-left"></i></a>
                 </span>
               </div>
             </div>
             <!-- Text -->
             <div>
-              <h3>Quên mật khẩu</h3>
+              <h3>Đặt lại mật khẩu</h3>
             </div>
 
             <div>
-              <p>Vui lòng nhập địa chỉ email để được liên kết với tài khoản của bạn</p>
+              <p>Vui lòng tạo mật khẩu mới cho tài khoản <span>HuyCrouch</span></p>
             </div>
             <!-- form -->
             <form>
+
               <div class="mb-3">
-                <label for="username" class="form-label">Email</label>
-                <input type="text" class="form-control form-control-lg" id="username"
-                  placeholder="Vui lòng nhập email của bạn" />
-                <div id="username-error" class="text-danger mt-2 m-lg-1"></div>
+                <label for="password" class="form-label">Mật khẩu</label>
+                <div class="input-group">
+                  <input type="password" class="form-control form-control-lg" id="password"
+                    placeholder="Vui lòng nhập mật khẩu của bạn" />
+                  <span class="eye-icon">
+                    <i class="far fa-eye" id="togglePassword"></i>
+                  </span>
+                </div>
+                <div id="password-error" class="text-danger mt-2 m-lg-1"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Xác nhận mật khẩu</label>
+                <div class="input-group">
+                  <input type="password" class="form-control form-control-lg" id="password"
+                    placeholder="Vui lòng nhập mật khẩu của bạn" />
+                  <span class="eye-icon">
+                    <i class="far fa-eye" id="togglePassword"></i>
+                  </span>
+                </div>
+                <div id="password-error" class="text-danger mt-2 m-lg-1"></div>
               </div>
 
               <button type="submit" class="mt-1 btn w-100 btn-login border">
-                Gửi link reset mật khẩu
+                Đổi mật khẩu
               </button>
 
             </form>

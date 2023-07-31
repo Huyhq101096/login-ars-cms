@@ -1,0 +1,64 @@
+body,
+html {
+  /* height: 100%; */
+}
+
+.left-side {
+  background-image: url("reset_pw_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  width: 41.67%;
+}
+
+.right-side {
+  min-height: 100vh;
+  width: 58.33%;
+}
+
+.online {
+  font-style: italic;
+}
+
+.btn-login {
+  background-color:  #09BDAB;
+  height: 48px;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color:  #10ecd6;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 20;
+}
+
+.btn-checkbox {
+  accent-color: #09BDAB;
+}
+
+
+.footer {
+  font-family: Poppins;
+  height: 68px;
+  background-color: #F2F4F7;
+}
+
+
+
+
+
+
+
+
+
+
+
