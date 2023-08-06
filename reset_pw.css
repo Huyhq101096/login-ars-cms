@@ -1,6 +1,7 @@
 body,
 html {
-  /* height: 100%; */
+  margin: 0;
+  padding: 0;
 }
 
 .left-side {
@@ -22,13 +23,13 @@ html {
 }
 
 .btn-login {
-  background-color:  #09BDAB;
+  background-color: #09bdab;
   height: 48px;
   color: white;
 }
 
 .btn-login:hover {
-  background-color:  #10ecd6;
+  background-color: #10ecd6;
 }
 
 .eye-icon {
@@ -42,23 +43,33 @@ html {
 }
 
 .btn-checkbox {
-  accent-color: #09BDAB;
+  accent-color: #09bdab;
 }
-
 
 .footer {
   font-family: Poppins;
   height: 68px;
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .full-side {
+    flex-direction: column;
+    
+  }
 
+  .left-side, .right-side {
+    width: 100%;
+  }
+}
 
+/* CSS for Phone */
+@media (max-width: 767px) {
+  .full-side {
+    flex-direction: column; 
+  }
 
-
-
-
-
-
-
-
+  .left-side, .right-side {
+    width: 100%;
+  }
+}

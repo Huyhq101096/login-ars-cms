@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="reset_pw.css" />
+    <title>Reset Password</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="reset_pw.css" />
-  <title>Reset Password</title>
-</head>
-
-<body>
-  <div class="w-100">
-    <div class="d-flex">
+  <body>
+    <div class="d-flex full-side">
       <!-- Phần bên trái -->
       <div class="left-side"></div>
 
       <!-- Phần bên phải -->
-      <div class="right-side d-flex flex-column ">
-
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="col-md-6">
+      <div class="right-side d-flex flex-column vh-100">
+        <div class="d-flex justify-content-center align-items-center vh-100">
+          <div class="col-lg-6 col-md-8 col-sm-6 p-3">
             <!-- logo and airbooking online -->
             <div class="d-flex gap-4 align-items-center mb-3">
               <!-- Phần chứa logo -->
               <div>
                 <span class="p-2">
-                  <a href="forget_pw.html"><i class="fas fa-arrow-left"></i></a>
+                  <a href="forget_pw.html"><i class="fas fa-arrow-left fa-lg text-dark"></i></a>
                 </span>
               </div>
             </div>
@@ -38,16 +39,21 @@
             </div>
 
             <div>
-              <p>Vui lòng tạo mật khẩu mới cho tài khoản <span>HuyCrouch</span></p>
+              <p>
+                Vui lòng tạo mật khẩu mới cho tài khoản <span>HuyCrouch</span>
+              </p>
             </div>
             <!-- form -->
             <form>
-
               <div class="mb-3">
                 <label for="password" class="form-label">Mật khẩu</label>
                 <div class="input-group">
-                  <input type="password" class="form-control form-control-lg" id="password"
-                    placeholder="Vui lòng nhập mật khẩu của bạn" />
+                  <input
+                    type="password"
+                    class="form-control form-control-lg"
+                    id="password"
+                    placeholder="Vui lòng nhập mật khẩu của bạn"
+                  />
                   <span class="eye-icon">
                     <i class="far fa-eye" id="togglePassword"></i>
                   </span>
@@ -56,10 +62,16 @@
               </div>
 
               <div class="mb-3">
-                <label for="password" class="form-label">Xác nhận mật khẩu</label>
+                <label for="password" class="form-label"
+                  >Xác nhận mật khẩu</label
+                >
                 <div class="input-group">
-                  <input type="password" class="form-control form-control-lg" id="password"
-                    placeholder="Vui lòng nhập mật khẩu của bạn" />
+                  <input
+                    type="password"
+                    class="form-control form-control-lg"
+                    id="password"
+                    placeholder="Vui lòng nhập mật khẩu của bạn"
+                  />
                   <span class="eye-icon">
                     <i class="far fa-eye" id="togglePassword"></i>
                   </span>
@@ -67,16 +79,17 @@
                 <div id="password-error" class="text-danger mt-2 m-lg-1"></div>
               </div>
 
-              <button type="submit" class="mt-1 btn w-100 btn-login border">
+              <button type="submit" class="mt-2 btn w-100 btn-login border">
                 Đổi mật khẩu
               </button>
-
             </form>
           </div>
         </div>
 
         <!-- Footer -->
-        <footer class="d-flex footer text-center justify-content-around align-items-center mt-auto">
+        <footer
+          class="d-flex footer text-center justify-content-around align-items-center mt-auto"
+        >
           <div>
             <span>Term of Use</span>
           </div>
@@ -87,88 +100,91 @@
             <span>Help Center</span>
           </div>
         </footer>
-
-
       </div>
+
     </div>
-  </div>
-  <script src="login.js"></script>
-  <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Lấy tham chiếu đến các phần tử cần sử dụng
-      const passwordInput = $("#password");
-      const togglePasswordIcon = $("#togglePassword");
 
-      // Bắt sự kiện click trên biểu tượng "eye"
-      togglePasswordIcon.on("click", function () {
-        // Kiểm tra kiểu hiển thị hiện tại của ô input
-        if (passwordInput.attr("type") === "password") {
-          // Nếu đang ẩn mật khẩu, thay đổi kiểu hiển thị sang "text"
-          passwordInput.attr("type", "text");
-          // Thay đổi icon sang biểu tượng "fa-eye-slash" (con mắt bị gạch)
-          togglePasswordIcon.removeClass("fa-eye");
-          togglePasswordIcon.addClass("fa-eye-slash");
-        } else {
-          // Nếu đang hiển thị mật khẩu, thay đổi kiểu hiển thị sang "password"
-          passwordInput.attr("type", "password");
-          // Thay đổi icon sang biểu tượng "fa-eye" (con mắt)
-          togglePasswordIcon.removeClass("fa-eye-slash");
-          togglePasswordIcon.addClass("fa-eye");
-        }
-      });
-    });
-  </script>
+    <script src="login.js"></script>
+    <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Lấy tham chiếu đến các phần tử cần sử dụng
+        const passwordInput = $("#password");
+        const togglePasswordIcon = $("#togglePassword");
 
-  <script>
-    const defaultUsername = "adminnnn"; // Tên đăng nhập mặc định
-    const defaultPassword = "password123"; // Mật khẩu mặc định
-    // Biểu thức chính quy để kiểm tra tên đăng nhập hợp lệ
-    const validUsernameRegex = /^(?=.*[a-zA-Z])(?=.*[0-9!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-
-    $(document).ready(function () {
-      // Lấy tham chiếu đến các phần tử cần sử dụng
-      const form = $("form");
-      const usernameInput = $("#username");
-      const passwordInput = $("#password");
-      const usernameError = $("#username-error");
-      const passwordError = $("#password-error");
-
-      // Kiểm tra khi người dùng submit form đăng nhập
-      form.submit(function (event) {
-        event.preventDefault();
-
-        const enteredUsername = usernameInput.val();
-        const enteredPassword = passwordInput.val();
-
-        if (!validUsernameRegex.test(enteredUsername)) {
-          // Nếu tên đăng nhập không hợp lệ, hiển thị thông báo lỗi tương ứng
-          if (enteredUsername.length < 8) {
-            usernameError.text("Tối thiểu 8 ký tự.");
-          } else if (!/(?=.*[0-9!@#$%^&*])/.test(enteredUsername)) {
-            usernameError.text("Phải có ít nhất 1 chữ số hoặc ký tự đặc biệt.");
-          } else if (!/(?=.*[a-zA-Z])/.test(enteredUsername)) {
-            usernameError.text("Phải có ít nhất 1 chữ cái thường hoặc in hoa.");
+        // Bắt sự kiện click trên biểu tượng "eye"
+        togglePasswordIcon.on("click", function () {
+          // Kiểm tra kiểu hiển thị hiện tại của ô input
+          if (passwordInput.attr("type") === "password") {
+            // Nếu đang ẩn mật khẩu, thay đổi kiểu hiển thị sang "text"
+            passwordInput.attr("type", "text");
+            // Thay đổi icon sang biểu tượng "fa-eye-slash" (con mắt bị gạch)
+            togglePasswordIcon.removeClass("fa-eye");
+            togglePasswordIcon.addClass("fa-eye-slash");
+          } else {
+            // Nếu đang hiển thị mật khẩu, thay đổi kiểu hiển thị sang "password"
+            passwordInput.attr("type", "password");
+            // Thay đổi icon sang biểu tượng "fa-eye" (con mắt)
+            togglePasswordIcon.removeClass("fa-eye-slash");
+            togglePasswordIcon.addClass("fa-eye");
           }
-          passwordError.text(""); // Xóa thông báo lỗi mật khẩu (nếu có)
-        } else if (enteredUsername !== defaultUsername) {
-          // Nếu tên đăng nhập không đúng, hiển thị thông báo lỗi
-          usernameError.text("Tên đăng nhập không đúng.");
-          passwordError.text(""); // Xóa thông báo lỗi mật khẩu (nếu có)
-        } else if (enteredPassword !== defaultPassword) {
-          // Nếu mật khẩu không đúng, hiển thị thông báo lỗi
-          passwordError.text("Mật khẩu không đúng.");
-          usernameError.text(""); // Xóa thông báo lỗi tên đăng nhập (nếu có)
-        } else {
-          // Nếu cả tên đăng nhập và mật khẩu đều đúng, thực hiện hành động đăng nhập
-          alert("Đăng nhập thành công!");
-          // Điều hướng đến trang sau khi đăng nhập thành công, ví dụ:
-          // window.location.href = "trang-chinh.html";
-        }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
 
+    <script>
+      const defaultUsername = "adminnnn"; // Tên đăng nhập mặc định
+      const defaultPassword = "password123"; // Mật khẩu mặc định
+      // Biểu thức chính quy để kiểm tra tên đăng nhập hợp lệ
+      const validUsernameRegex =
+        /^(?=.*[a-zA-Z])(?=.*[0-9!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+
+      $(document).ready(function () {
+        // Lấy tham chiếu đến các phần tử cần sử dụng
+        const form = $("form");
+        const usernameInput = $("#username");
+        const passwordInput = $("#password");
+        const usernameError = $("#username-error");
+        const passwordError = $("#password-error");
+
+        // Kiểm tra khi người dùng submit form đăng nhập
+        form.submit(function (event) {
+          event.preventDefault();
+
+          const enteredUsername = usernameInput.val();
+          const enteredPassword = passwordInput.val();
+
+          if (!validUsernameRegex.test(enteredUsername)) {
+            // Nếu tên đăng nhập không hợp lệ, hiển thị thông báo lỗi tương ứng
+            if (enteredUsername.length < 8) {
+              usernameError.text("Tối thiểu 8 ký tự.");
+            } else if (!/(?=.*[0-9!@#$%^&*])/.test(enteredUsername)) {
+              usernameError.text(
+                "Phải có ít nhất 1 chữ số hoặc ký tự đặc biệt."
+              );
+            } else if (!/(?=.*[a-zA-Z])/.test(enteredUsername)) {
+              usernameError.text(
+                "Phải có ít nhất 1 chữ cái thường hoặc in hoa."
+              );
+            }
+            passwordError.text(""); // Xóa thông báo lỗi mật khẩu (nếu có)
+          } else if (enteredUsername !== defaultUsername) {
+            // Nếu tên đăng nhập không đúng, hiển thị thông báo lỗi
+            usernameError.text("Tên đăng nhập không đúng.");
+            passwordError.text(""); // Xóa thông báo lỗi mật khẩu (nếu có)
+          } else if (enteredPassword !== defaultPassword) {
+            // Nếu mật khẩu không đúng, hiển thị thông báo lỗi
+            passwordError.text("Mật khẩu không đúng.");
+            usernameError.text(""); // Xóa thông báo lỗi tên đăng nhập (nếu có)
+          } else {
+            // Nếu cả tên đăng nhập và mật khẩu đều đúng, thực hiện hành động đăng nhập
+            alert("Đăng nhập thành công!");
+            // Điều hướng đến trang sau khi đăng nhập thành công, ví dụ:
+            // window.location.href = "trang-chinh.html";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
